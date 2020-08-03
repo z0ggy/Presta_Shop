@@ -30,8 +30,6 @@ public class Zadania_Step {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(url);
-        //setUp_page = new SetUp_Page(driver);
-        //setUp_page.fireBrowser();
         login_page = new Login_Page(driver);
         login_page.loginAs("dvxmvgmxleffsbttcw@awdrt.org", "12345");
 
