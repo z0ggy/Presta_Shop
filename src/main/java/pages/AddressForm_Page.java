@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class addressForm_Page {
+public class AddressForm_Page {
     public static WebDriver driver;
 
     // Constructor
-    public addressForm_Page(WebDriver driver) {
+    public AddressForm_Page(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -31,9 +31,9 @@ public class addressForm_Page {
     @FindBy(css = "input[name='phone']")
     WebElement phone;
 
-    public void formFiller(String pageAlias){
-        alias.isEnabled();
-        alias.sendKeys(pageAlias);
+    public void formFiller(String myAlias){
+       // alias.isEnabled();
+        alias.sendKeys(myAlias);
     }
 }
 

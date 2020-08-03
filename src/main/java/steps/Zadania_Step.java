@@ -6,10 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.Header_Page;
-import pages.Login_Page;
-import pages.SetUp_Page;
-import pages.UserAddressPage;
+import pages.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,27 +14,32 @@ public class Zadania_Step {
 
     String url = "https://prod-kurs.coderslab.pl/index.php?controller=authentication";
     String chrome = "webdriver.chrome.driver";
-    String pathToDriversFile ="src/main/resources/drivers/chromedriver";
+    String pathToWindowsDriversFile ="src/main/resources/drivers/chromedriver.exe";
+    String pathToLinuxDriverFile ="src/main/resources/drivers/chromedriver";
     UserAddressPage addressPage;
     SetUp_Page setUp_page;
     Login_Page login_page;
     Header_Page header_page;
+    AddressForm_Page addressForm_page;
     WebDriver driver;
     @Given("Log in to CodersLab shop")
     public void userIsLoggedInToCodersLabShop() {
-        System.setProperty(chrome,pathToDriversFile);
+        // Checking os
+        if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+            System.setProperty(chrome,pathToWindowsDriversFile);
+        }else { System.setProperty(chrome, pathToLinuxDriverFile); }
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(url);
         login_page = new Login_Page(driver);
         login_page.loginAs("dvxmvgmxleffsbttcw@awdrt.org", "12345");
+        header_page = new Header_Page(driver);
 
     }
 
     @When("^User click on user name$")
     public void userGoesToAddressPage() {
-        header_page = new Header_Page(driver);
         header_page.goToMyAccountPage();
 
     }
@@ -49,7 +51,8 @@ public class Zadania_Step {
 
     @And("^User set following alias \"(.*)\"$")
     public void userSetFollowingAlias(String alias) {
-        addressPage.addAlias(alias);
+        addressForm_page = new AddressForm_Page(driver);
+        addressForm_page.formFiller(alias);
     }
 
     @And("^User set following city \"([^\"]*)\"$")
