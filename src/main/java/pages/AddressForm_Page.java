@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
 
 public class AddressForm_Page {
@@ -47,7 +46,7 @@ public class AddressForm_Page {
         myCountries.get(0).click();
     }// Country Box
 
-    @FindBy(css = "button.btn.btn-primary") WebElement submit;
+    @FindBy(css = "footer.clearfix > button") WebElement submit;
     public void clickSubmitButton() {
         submit.isEnabled();
         submit.isDisplayed();

@@ -17,8 +17,9 @@ public class My_Account_Page {
     }
     // List WebElements of tiles from My account
     @FindBy(css = ".col-lg-4.col-md-6") List<WebElement> myAccountTile;
-    public void setMyAccountTile(int wichTile){
-        myAccountTile.get(wichTile).click();
+
+    public void clickUserInformationTile() {
+        myAccountTile.get(1).click();
     }
 
 }
