@@ -7,10 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class AddressForm_Page {
-    private static WebDriver driver;
 
     public AddressForm_Page(WebDriver driver) {
-        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 

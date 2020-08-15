@@ -1,17 +1,11 @@
 package steps;
 
 import CoreTest.SetupBrowser;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.*;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -62,5 +56,9 @@ public class AddAddressTest {
         // Delete all addresses and checking to all addresses are deleted
         addressesList_page.deleteAddress();
         assertTrue(addressesList_page.getDeleteAddressesList() == 0);
+    }
+    @After
+    public void tearDown() {
+        SetupBrowser.getDriver().quit();
     }
 }
