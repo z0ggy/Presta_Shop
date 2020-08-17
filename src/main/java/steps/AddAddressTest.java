@@ -55,7 +55,7 @@ public class AddAddressTest {
 
         // Delete all addresses and checking to all addresses are deleted
         addressesList_page.deleteAddress();
-        assertTrue(addressesList_page.getDeleteAddressesList() == 0);
+        assertEquals(0, addressesList_page.getDeleteAddressesList());
     }
     @After
     public void tearDown() {

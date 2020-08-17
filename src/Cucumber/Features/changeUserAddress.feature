@@ -1,14 +1,4 @@
 Feature: Change user address
-#  Scenario : Add new address
-#    Given Log in to CodersLab shop
-#    When User goes to AddressPage
-#    And User set following address "Polska"
-#    And User set following city "Warsaw"
-#    And User set following post code "00-007"
-#    And User submits add new address form
-#    Then Address was submitted correctly
-#    And close driver
-
 
   Scenario Outline: Add new address
     Given Log in to CodersLab shop
@@ -23,9 +13,8 @@ Feature: Change user address
     Then User submits add new address form
     And User delete address
     And User check the address is deleted
-    And print value of all form field
     And close driver
     Examples:
       | alias      | city        | postCode | country        | phone        | address         |
       | Grunwald   | Ladek Zdroj | 00-000   | United Kingdom | 004878965033 | Kolejowa street |
-      | Zasadniczo | Praga       | 000-001  | United Kingdom | 0045876921   | Ogorkowa        |
+    #  | Zasadniczo | Praga       | 000-001  | United Kingdom | 0045876921   | Ogorkowa        |
