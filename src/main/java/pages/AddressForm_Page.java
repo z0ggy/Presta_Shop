@@ -44,18 +44,24 @@ public class AddressForm_Page {
         myCountries.get(0).click();
     }// Country Box
 
+    @FindBy(name = "phone") WebElement phone;
+    public void inputPhone(String myPhone) {
+        phone.click();
+        phone.sendKeys(myPhone);
+    }// Phone Box
+
     @FindBy(css = "footer.clearfix > button") WebElement submit;
     public void clickSubmitButton() {
         submit.isEnabled();
         submit.isDisplayed();
         submit.click();
-    }
+    }// Submit button
 
     public String getMyAlias()    { return myAlias.getAttribute("value"); }
     public String getMyAddress()  { return myAddress.getAttribute("value"); }
     public String getMyPostcode() { return myPostcode.getAttribute("value"); }
     public String getMyCity()     { return myCity.getAttribute("value"); }
     public String getMyCountry()  { return myCountries.get(0).getText(); }
-
+    public String getMyPhone()    { return phone.getAttribute("value");}
 }
 

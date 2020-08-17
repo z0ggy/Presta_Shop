@@ -8,9 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class AddressesList_Page {
-    private WebDriver driver;
     public AddressesList_Page(WebDriver driver) {
-        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 

@@ -16,11 +16,12 @@ public class SetupBrowser {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
 
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://prod-kurs.coderslab.pl/index.php?controller=authentication");
     }
 
+    // Getter for driver is use by test class in steps
     public static WebDriver getDriver() {
         return driver;
     }
