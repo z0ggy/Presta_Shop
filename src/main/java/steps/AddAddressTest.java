@@ -51,11 +51,13 @@ public class AddAddressTest {
     @And("^User set following address \"([^\"]*)\"$")
     public void userSetFollowingAddress(String address) {
         prestaAddressForm_page.inputAddress(address);
+        assertEquals(address,prestaAddressForm_page.getMyAddress());
     }
 
     @And("^User set following city \"([^\"]*)\"$")
     public void userSetFollowingCity(String city)  {
         prestaAddressForm_page.inputCity(city);
+        assertEquals(city,prestaAddressForm_page.getMyCity());
     }
 
     @And("^User set following post code \"([^\"]*)\"$")
