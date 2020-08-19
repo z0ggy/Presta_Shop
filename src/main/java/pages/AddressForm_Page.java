@@ -46,6 +46,7 @@ public class AddressForm_Page {
 
     @FindBy(name = "phone") WebElement phone;
     public void inputPhone(String myPhone) {
+        phone.isEnabled();
         phone.click();
         phone.sendKeys(myPhone);
     }// Phone Box

@@ -63,16 +63,19 @@ public class AddAddressTest {
     @And("^User set following post code \"([^\"]*)\"$")
     public void userSetFollowingPostCode(String postCode)  {
         prestaAddressForm_page.inputPostcode(postCode);
+        assertEquals(postCode, prestaAddressForm_page.getMyPostcode());
     }
 
     @And("^User set following country \"([^\"]*)\"$")
     public void userSetFollowingCountry(String country)  {
         prestaAddressForm_page.chooseCountry();
+        assertEquals(country, prestaAddressForm_page.getMyCountry());
     }
 
     @And("^User set following phone \"([^\"]*)\"$")
     public void userSetFollowingPhone(String phone)  {
         prestaAddressForm_page.inputPhone(phone);
+        assertEquals(phone, prestaAddressForm_page.getMyPhone());
     }
 
     @Then("^User submits add new address form$")
