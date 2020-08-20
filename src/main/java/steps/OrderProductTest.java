@@ -2,6 +2,7 @@ package steps;
 
 import CoreTest.SetupBrowser;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.*;
 
@@ -13,6 +14,7 @@ public class OrderProductTest {
     My_Account_Page prestaMyAccount_page;
     AddressesList_Page prestaAddresses_page;
     AddressForm_Page prestaAddressForm_page;
+    Home_Page home_page;
 
 
     @Given("^User logged in to CodersLab shop$")
@@ -25,5 +27,11 @@ public class OrderProductTest {
         prestaMyAccount_page = new My_Account_Page(SetupBrowser.getDriver());
         prestaAddresses_page = new AddressesList_Page(SetupBrowser.getDriver());
         prestaAddressForm_page = new AddressForm_Page(SetupBrowser.getDriver());
+        home_page = new Home_Page(SetupBrowser.getDriver());
+    }
+
+    @When("^User click on product$")
+    public void userClickOnProduct() {
+        home_page.clickProduct();
     }
 }
