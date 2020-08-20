@@ -15,4 +15,9 @@ public class Home_Page {
 
     @FindBy(tagName = "article")
     List<WebElement> products;
+
+    public void clickProduct() {
+        products.get(1).isEnabled();
+        products.get(1).click();
+    }
 }
