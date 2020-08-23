@@ -19,11 +19,6 @@ public class Home_Page {
     @FindBy(tagName = "article")
     List<WebElement> products;
 
-    @FindBy(className = "regular-price")
-    WebElement regularPrice;
-
-    @FindBy(className = "current-price")
-    WebElement currentPrice;
 
     public void clickProduct() {
         products.get(Hummingbird_Printed_Sweater).isEnabled();

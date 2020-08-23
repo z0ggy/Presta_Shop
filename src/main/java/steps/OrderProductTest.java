@@ -1,6 +1,7 @@
 package steps;
 
 import CoreTest.SetupBrowser;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +16,7 @@ public class OrderProductTest {
     AddressesList_Page prestaAddresses_page;
     AddressForm_Page prestaAddressForm_page;
     Home_Page home_page;
+    Product_Page product_page;
 
 
     @Given("^User logged in to CodersLab shop$")
@@ -28,6 +30,7 @@ public class OrderProductTest {
         prestaAddresses_page = new AddressesList_Page(SetupBrowser.getDriver());
         prestaAddressForm_page = new AddressForm_Page(SetupBrowser.getDriver());
         home_page = new Home_Page(SetupBrowser.getDriver());
+        product_page = new Product_Page(SetupBrowser.getDriver());
     }
 
 
@@ -36,7 +39,14 @@ public class OrderProductTest {
     @When("^User click on product$")
     public void userClickOnProduct() {
         home_page.clickProduct();
+        //System.out.println("xxxxxxxxxxxxxxxxxxxxxx");
+        //product_page.printPrice();
+        //product_page.checkDiscount(20);
     }
 
 
+    @And("^User check is the product on discount$")
+    public void userCheckIsTheProductOnDiscount() {
+        product_page.checkProductIsOnDiscount();
+    }
 }
