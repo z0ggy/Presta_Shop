@@ -33,20 +33,13 @@ public class OrderProductTest {
         product_page = new Product_Page(SetupBrowser.getDriver());
     }
 
-
-
-
     @When("^User click on product$")
     public void userClickOnProduct() {
         home_page.clickProduct();
-        //System.out.println("xxxxxxxxxxxxxxxxxxxxxx");
-        //product_page.printPrice();
-        //product_page.checkDiscount(20);
     }
 
-
-    @And("^User check is the product on discount$")
-    public void userCheckIsTheProductOnDiscount() {
-        product_page.checkProductIsOnDiscount();
+    @And("^User check is the product on discount (\\d+)$")
+    public void userCheckIsTheProductOnDiscount(double percent) {
+        product_page.checkProductIsOnDiscount(percent);
     }
 }

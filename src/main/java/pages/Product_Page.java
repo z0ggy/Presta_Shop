@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.junit.Assert;
 
 public class Product_Page {
-    double percent = 20;
 
     public Product_Page(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -24,18 +23,7 @@ public class Product_Page {
         return priceBeforeDiscount - priceBeforeDiscount * (percent / 100);
     }
 
-    public void printPrice() {
-        double priceAfterDiscount = Double.parseDouble(currentPrice.getText().substring(1, 7));
-        System.out.println(regularPrice.getText().substring(1));
-        //System.out.println(priceBeforeDiscount);
-        Double priceBeforeDiscount = Double.parseDouble(regularPrice.getText().substring(1));
-        System.out.println(priceBeforeDiscount);
-        System.out.println(currentPrice.getText());
-        System.out.println(currentPrice.getText().substring(1, 7));
-        System.out.println(priceAfterDiscount);
-    }
-
-    public void checkProductIsOnDiscount() {
+    public void checkProductIsOnDiscount(double percent) {
         double priceAfterDiscount = Double.parseDouble(currentPrice.getText().substring(1, 7));
         if (checkDiscount(percent) == priceAfterDiscount) {
             System.out.println("Price is on " + percent + " % " + "discount");
