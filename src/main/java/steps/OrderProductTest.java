@@ -42,4 +42,9 @@ public class OrderProductTest {
     public void userCheckIsTheProductOnDiscount(double percent) {
         product_page.checkProductIsOnDiscount(percent);
     }
+
+    @And("^User will choose the size (.*) of the product$")
+    public void userWillChooseTheSizeMOfTheProduct(String size) {
+        product_page.ChooseSize(size);
+    }
 }

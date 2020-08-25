@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 public class Product_Page {
 
@@ -18,6 +22,9 @@ public class Product_Page {
     @FindBy(className = "current-price")
     WebElement currentPrice;
 
+    @FindBy(css = "#group_1 > option")
+    List <WebElement> productsSizes;
+
     public double checkDiscount(double percent) {
         double priceBeforeDiscount = Double.parseDouble(regularPrice.getText().substring(1));
         return priceBeforeDiscount - priceBeforeDiscount * (percent / 100);
@@ -30,5 +37,17 @@ public class Product_Page {
         } else {
             Assert.fail("Price is not on discount");
         }
+    }
+    public void ChooseSize(String size) {
+        for (int i = 0; i < productsSizes.size(); i++) {
+            String element = productsSizes.get(i).getAttribute("title");
+            if (element.equals(size)) {
+                productsSizes.get(i).click();
+                System.out.println("User selected a size "+ productsSizes.get(i).getAttribute("title"));
+            }
+        }
+    }
+    public void printValue(){
+        System.out.println(productsSizes.get(0).getText());
     }
 }
