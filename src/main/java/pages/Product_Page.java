@@ -28,6 +28,7 @@ public class Product_Page {
     List <WebElement> productsSizes;
 
     @FindBy(name = "qty") WebElement quantity;
+    @FindBy(css = "div.add > button") WebElement cart;
 
     public double checkDiscount(double percent) {
         double priceBeforeDiscount = Double.parseDouble(regularPrice.getText().substring(1));
