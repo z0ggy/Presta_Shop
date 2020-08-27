@@ -5,7 +5,7 @@ Feature: choose and order product
     When User click on product
     And User check is the product on discount 20
     And User will choose the size XL of the product
-    And User will choose 5 pieces
+    And User will choose 6 pieces
 
 #    Examples:
 #    |quanity|

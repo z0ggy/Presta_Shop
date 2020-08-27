@@ -51,13 +51,13 @@ public class Product_Page {
             }
         }
     }
-    public void chooseQuantity(int total) {
+    public void chooseQuantity(int total) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(SetupBrowser.getDriver(),10);
-        quantity.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(quantity));
         quantity.click();
         wait.until(ExpectedConditions.visibilityOf(quantity));
         quantity.clear();
-        //quantity.isDisplayed();
+        quantity.sendKeys(Keys.DELETE);
         quantity.sendKeys(Keys.BACK_SPACE,String.valueOf(total));
     }
     public void printValue(){
