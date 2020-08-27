@@ -47,4 +47,11 @@ public class OrderProductTest {
     public void userWillChooseTheSizeMOfTheProduct(String size) {
         product_page.ChooseSize(size);
     }
+
+    @And("^User will choose (\\d+) pieces$")
+    public void userWillChoosePieces(int total) {
+        product_page.printValue();
+        product_page.chooseQuantity(total);
+        product_page.printValue();
+    }
 }

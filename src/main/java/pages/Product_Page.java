@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,6 +26,8 @@ public class Product_Page {
     @FindBy(css = "#group_1 > option")
     List <WebElement> productsSizes;
 
+    @FindBy(name = "qty") WebElement quantity;
+
     public double checkDiscount(double percent) {
         double priceBeforeDiscount = Double.parseDouble(regularPrice.getText().substring(1));
         return priceBeforeDiscount - priceBeforeDiscount * (percent / 100);
@@ -47,7 +50,12 @@ public class Product_Page {
             }
         }
     }
+    public void chooseQuantity(int total){
+        quantity.click();
+        quantity.sendKeys(Keys.BACK_SPACE, String.valueOf(total));
+    }
     public void printValue(){
-        System.out.println(productsSizes.get(0).getText());
+        //System.out.println(productsSizes.get(0).getText());
+        System.out.println("ilosc sztuk "+ quantity.getAttribute("value"));
     }
 }
