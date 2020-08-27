@@ -49,8 +49,9 @@ public class OrderProductTest {
     }
 
     @And("^User will choose (\\d+) pieces$")
-    public void userWillChoosePieces(int total) {
+    public void userWillChoosePieces(int total) throws InterruptedException {
         product_page.printValue();
+        //Thread.sleep(1000);
         product_page.chooseQuantity(total);
         product_page.printValue();
     }

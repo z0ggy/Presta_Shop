@@ -1,5 +1,6 @@
 package pages;
 
+import CoreTest.SetupBrowser;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -50,9 +51,14 @@ public class Product_Page {
             }
         }
     }
-    public void chooseQuantity(int total){
+    public void chooseQuantity(int total) {
+        WebDriverWait wait = new WebDriverWait(SetupBrowser.getDriver(),10);
+        quantity.isDisplayed();
         quantity.click();
-        quantity.sendKeys(Keys.BACK_SPACE, String.valueOf(total));
+        wait.until(ExpectedConditions.visibilityOf(quantity));
+        quantity.clear();
+        //quantity.isDisplayed();
+        quantity.sendKeys(Keys.BACK_SPACE,String.valueOf(total));
     }
     public void printValue(){
         //System.out.println(productsSizes.get(0).getText());
