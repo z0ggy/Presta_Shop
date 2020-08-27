@@ -53,12 +53,10 @@ public class Product_Page {
     }
     public void chooseQuantity(int total) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(SetupBrowser.getDriver(),10);
-        wait.until(ExpectedConditions.visibilityOf(quantity));
         quantity.click();
         wait.until(ExpectedConditions.visibilityOf(quantity));
         quantity.clear();
-        quantity.sendKeys(Keys.DELETE);
-        quantity.sendKeys(Keys.BACK_SPACE,String.valueOf(total));
+        quantity.sendKeys(Keys.BACK_SPACE,Keys.DELETE,String.valueOf(total));
     }
     public void printValue(){
         //System.out.println(productsSizes.get(0).getText());
