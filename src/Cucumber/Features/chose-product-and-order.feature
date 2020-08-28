@@ -8,6 +8,7 @@ Feature: choose and order product
     And User will choose 5 pieces
     And User will add item to cart
     And User will proceed to checkout
+    And User will proceed to checkout from shopping cart
 
 #    Examples:
 #    |quanity|

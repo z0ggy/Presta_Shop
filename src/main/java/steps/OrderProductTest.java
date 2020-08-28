@@ -17,6 +17,7 @@ public class OrderProductTest {
     AddressForm_Page prestaAddressForm_page;
     Home_Page home_page;
     Product_Page product_page;
+    ShoppingCart_Page shoppingCart_page;
 
 
     @Given("^User logged in to CodersLab shop$")
@@ -31,6 +32,7 @@ public class OrderProductTest {
         prestaAddressForm_page = new AddressForm_Page(SetupBrowser.getDriver());
         home_page = new Home_Page(SetupBrowser.getDriver());
         product_page = new Product_Page(SetupBrowser.getDriver());
+        shoppingCart_page = new ShoppingCart_Page(SetupBrowser.getDriver());
     }
 
     @When("^User click on product$")
@@ -63,5 +65,10 @@ public class OrderProductTest {
     @And("^User will proceed to checkout$")
     public void userWillProceedToCheckout() {
         product_page.proceedToCheckout();
+    }
+
+    @And("^User will proceed to checkout from shopping cart$")
+    public void userWillProceedToCheckoutFromShoppingCart() {
+        shoppingCart_page.proceedToCheckout();
     }
 }
