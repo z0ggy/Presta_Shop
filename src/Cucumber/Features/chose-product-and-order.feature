@@ -7,6 +7,7 @@ Feature: choose and order product
     And User will choose the size XL of the product
     And User will choose 5 pieces
     And User will add item to cart
+    And User will proceed to checkout
 
 #    Examples:
 #    |quanity|

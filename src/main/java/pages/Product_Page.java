@@ -29,6 +29,7 @@ public class Product_Page {
 
     @FindBy(css = "input.input-group") WebElement quantity;
     @FindBy(css = "div.add") WebElement cart;
+    @FindBy(css = "a.btn") WebElement proceed;
 
     public double checkDiscount(double percent) {
         double priceBeforeDiscount = Double.parseDouble(regularPrice.getText().substring(1));
@@ -66,5 +67,9 @@ public class Product_Page {
     public void addToCart() {
         cart.isDisplayed();
         cart.click();
+    }
+    public void proceedToCheckout() {
+        proceed.isDisplayed();
+        proceed.click();
     }
 }
