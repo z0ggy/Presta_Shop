@@ -59,4 +59,9 @@ public class OrderProductTest {
     public void userWillAddItemToCart() {
         product_page.addToCart();
     }
+
+    @And("^User will proceed to checkout$")
+    public void userWillProceedToCheckout() {
+        product_page.proceedToCheckout();
+    }
 }
