@@ -27,8 +27,8 @@ public class Product_Page {
     @FindBy(css = "#group_1 > option")
     List <WebElement> productsSizes;
 
-    @FindBy(name = "qty") WebElement quantity;
-    @FindBy(css = "div.add > button") WebElement cart;
+    @FindBy(css = "input.input-group") WebElement quantity;
+    @FindBy(css = "div.add") WebElement cart;
 
     public double checkDiscount(double percent) {
         double priceBeforeDiscount = Double.parseDouble(regularPrice.getText().substring(1));
@@ -55,12 +55,16 @@ public class Product_Page {
     public void chooseQuantity(int total) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(SetupBrowser.getDriver(),10);
         quantity.click();
-        wait.until(ExpectedConditions.visibilityOf(quantity));
         quantity.clear();
-        quantity.sendKeys(Keys.BACK_SPACE,Keys.DELETE,String.valueOf(total));
+        wait.until(ExpectedConditions.attributeToBe(quantity,"value","1"));
+        quantity.sendKeys(Keys.BACK_SPACE,String.valueOf(total));
     }
     public void printValue(){
         //System.out.println(productsSizes.get(0).getText());
         System.out.println("ilosc sztuk "+ quantity.getAttribute("value"));
+    }
+    public void addToCart() {
+        cart.isDisplayed();
+        cart.click();
     }
 }
