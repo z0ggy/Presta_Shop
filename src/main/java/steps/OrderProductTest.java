@@ -76,6 +76,6 @@ public class OrderProductTest {
 
     @And("^User will fill address form$")
     public void userWillFillAddressForm() {
-        order_page.addAddress();
+        order_page.fillAddressOrderPage();
     }
 }
