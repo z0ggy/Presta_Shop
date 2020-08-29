@@ -18,6 +18,7 @@ public class OrderProductTest {
     Home_Page home_page;
     Product_Page product_page;
     ShoppingCart_Page shoppingCart_page;
+    Order_Page order_page;
 
 
     @Given("^User logged in to CodersLab shop$")
@@ -33,6 +34,7 @@ public class OrderProductTest {
         home_page = new Home_Page(SetupBrowser.getDriver());
         product_page = new Product_Page(SetupBrowser.getDriver());
         shoppingCart_page = new ShoppingCart_Page(SetupBrowser.getDriver());
+        order_page = new Order_Page(SetupBrowser.getDriver());
     }
 
     @When("^User click on product$")
@@ -70,5 +72,10 @@ public class OrderProductTest {
     @And("^User will proceed to checkout from shopping cart$")
     public void userWillProceedToCheckoutFromShoppingCart() {
         shoppingCart_page.proceedToCheckout();
+    }
+
+    @And("^User will fill address form$")
+    public void userWillFillAddressForm() {
+        order_page.addAddress();
     }
 }

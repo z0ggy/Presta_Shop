@@ -10,11 +10,12 @@ public class Order_Page {
     public Order_Page(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
-    @FindBy(name = "address1")
-    WebElement address;
+    @FindBy(name = "address1") WebElement address;
+    @FindBy(name = "postcode") WebElement postcode;
 
-    public void addAddress(String myAddress) {
+    public void addAddress() {
         address.click();
         address.sendKeys("Upper lane");
     }
+    public void
 }
