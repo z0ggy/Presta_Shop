@@ -77,5 +77,11 @@ public class OrderProductTest {
     @And("^User will fill address form$")
     public void userWillFillAddressForm() {
         order_page.fillAddressOrderPage();
+        order_page.clickContinue();
+    }
+
+    @And("^User will choose delivery method$")
+    public void userWillChooseDeliveryMethod() throws InterruptedException {
+        order_page.choosePrestaShopDelivery();
     }
 }

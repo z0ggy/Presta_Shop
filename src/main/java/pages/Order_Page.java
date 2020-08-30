@@ -21,6 +21,14 @@ public class Order_Page {
     WebElement city;
     @FindBy(css = "div.col-md-6 > select > option")
     List<WebElement> countries;
+    @FindBy(css = "form > footer > button")
+    WebElement continueButton;
+    @FindBy(css = ".delivery-option .custom-radio > input")
+    List<WebElement> deliveryOption;
+    @FindBy(css = "span.custom-radio>input#delivery_option_1")
+    WebElement deliveryOptionPresta;
+    @FindBy(css = "#js-delivery > button")
+    WebElement orderContinuebutton;
 
     public void fillAddressOrderPage() {
         address.click();
@@ -30,6 +38,20 @@ public class Order_Page {
         city.click();
         city.sendKeys("London");
         countries.get(1).click();
-
     }
+
+    public void clickContinue() {
+        continueButton.isDisplayed();
+        continueButton.click();
+    }
+
+    // .get(0) is for presta shop ; .get(1) courier
+    public void choosePrestaShopDelivery() {
+        if (deliveryOption.get(0).isSelected()) {
+            orderContinuebutton.click();
+        } else {
+            deliveryOption.get(0).click();
+        }
+    }
+
 }

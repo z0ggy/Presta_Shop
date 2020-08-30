@@ -10,6 +10,7 @@ Feature: choose and order product
     And User will proceed to checkout
     And User will proceed to checkout from shopping cart
     And User will fill address form
+    And User will choose delivery method
 
 #    Examples:
 #    |quanity|
