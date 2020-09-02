@@ -81,7 +81,7 @@ public class OrderProductTest {
     }
 
     @And("^User will choose delivery method$")
-    public void userWillChooseDeliveryMethod() throws InterruptedException {
+    public void userWillChooseDeliveryMethod() {
         order_page.choosePrestaShopDelivery();
     }
 }

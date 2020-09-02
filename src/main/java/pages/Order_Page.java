@@ -28,7 +28,8 @@ public class Order_Page {
     @FindBy(css = "span.custom-radio>input#delivery_option_1")
     WebElement deliveryOptionPresta;
     @FindBy(css = "#js-delivery > button")
-    WebElement orderContinuebutton;
+    WebElement orderContinueButton;
+    @FindBy(css = "input.ps-shown-by-js[type='radio']") List<WebElement> paymentOptions;
 
     public void fillAddressOrderPage() {
         address.click();
@@ -48,7 +49,7 @@ public class Order_Page {
     // .get(0) is for presta shop ; .get(1) courier
     public void choosePrestaShopDelivery() {
         if (deliveryOption.get(0).isSelected()) {
-            orderContinuebutton.click();
+            orderContinueButton.click();
         } else {
             deliveryOption.get(0).click();
         }
