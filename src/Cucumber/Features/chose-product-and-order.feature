@@ -11,6 +11,7 @@ Feature: choose and order product
     And User will proceed to checkout from shopping cart
     And User will fill address form
     And User will choose delivery method
+    And User will choose payment option "Pay by check"
 
 #    Examples:
 #    |quanity|
