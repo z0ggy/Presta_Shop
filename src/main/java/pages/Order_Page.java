@@ -30,6 +30,7 @@ public class Order_Page {
     @FindBy(css = "#js-delivery > button")
     WebElement orderContinueButton;
     @FindBy(css = "input.ps-shown-by-js[type='radio']") List<WebElement> paymentOptions;
+    @FindBy(css = "div.float-xs-left>span>input") WebElement conditionsToApprove;
 
     public void fillAddressOrderPage() {
         address.click();
@@ -53,6 +54,16 @@ public class Order_Page {
         } else {
             deliveryOption.get(0).click();
         }
+    }
+    // .get(0) is for payment by check .get(1) is for the card
+    public void choosePaymentOption() {
+        if (paymentOptions.get(0).isSelected()) {
+            conditionsToApprove.click();
+        }else {
+            paymentOptions.get(0).click();
+            conditionsToApprove.click();
+        }
+
     }
 
 }
