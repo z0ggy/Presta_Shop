@@ -1,6 +1,7 @@
 package steps;
 
 import CoreTest.SetupBrowser;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -83,5 +84,10 @@ public class OrderProductTest {
     @And("^User will choose delivery method$")
     public void userWillChooseDeliveryMethod() {
         order_page.choosePrestaShopDelivery();
+    }
+
+    @And("^User will choose payment option \"([^\"]*)\"$")
+    public void userWillChoosePaymentOption(String arg0)  {
+        order_page.choosePaymentOption();
     }
 }

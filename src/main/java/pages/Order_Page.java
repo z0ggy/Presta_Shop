@@ -31,6 +31,7 @@ public class Order_Page {
     WebElement orderContinueButton;
     @FindBy(css = "input.ps-shown-by-js[type='radio']") List<WebElement> paymentOptions;
     @FindBy(css = "div.float-xs-left>span>input") WebElement conditionsToApprove;
+    @FindBy(css = "button.btn.center-block") WebElement obligationToPay;
 
     public void fillAddressOrderPage() {
         address.click();
