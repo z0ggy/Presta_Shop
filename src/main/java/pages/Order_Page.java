@@ -66,5 +66,9 @@ public class Order_Page {
         }
 
     }
+    public void obligationToPay() {
+        obligationToPay.isDisplayed();
+        obligationToPay.click();
+    }
 
 }
