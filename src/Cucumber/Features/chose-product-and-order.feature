@@ -12,7 +12,7 @@ Feature: choose and order product
     And User will fill address form
     And User will choose delivery method
     And User will choose payment option "Pay by check"
-    And User will click "order with an obligation to pay"
+    And User will click order with an obligation to pay
 
 #    Examples:
 #    |quanity|

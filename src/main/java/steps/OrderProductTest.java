@@ -90,4 +90,9 @@ public class OrderProductTest {
     public void userWillChoosePaymentOption(String arg0)  {
         order_page.choosePaymentOption();
     }
+
+    @And("^User will click order with an obligation to pay$")
+    public void userWillClickOrderWithAnObligationToPay() {
+        order_page.obligationToPay();
+    }
 }
