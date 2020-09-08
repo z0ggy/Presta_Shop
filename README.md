@@ -1,7 +1,7 @@
 # Presta_Shop
 Automation testing web application, an online shop with cucumber and JUnit in Java language
 ### Hi there 👋, my name is Dominik
-![](https://arturssmirnovs.github.io/github-profile-readme-generator/images/banner.png)
+![](![prestaImage](https://user-images.githubusercontent.com/66419930/92466480-0f42a300-f1c8-11ea-8ace-137fe0f31960.png))
 
 I made this project for testing automation an online store with selenium java framework
 
