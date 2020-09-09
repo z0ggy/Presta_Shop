@@ -13,7 +13,6 @@ Skills: VUE JS / REACT / JS / HTML / CSS
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/z0ggy)  
  
-** Gif file
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/66419930/92660408-401ef700-f2f2-11ea-963f-e34d2da91248.gif)
 
