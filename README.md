@@ -14,3 +14,5 @@ Skills: VUE JS / REACT / JS / HTML / CSS
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/z0ggy)  
 
 ![Profile views](https://gpvc.arturio.dev/z0ggy)  
+**Recordit**
+![Recordit GIF](http://g.recordit.co/iLN6A0vSD8.gif)
