@@ -1,4 +1,4 @@
-# Automation testing web application, an online shop with cucumber and JUnit in Java language
+# Automation testing web application, an online shop with selenium framework in Java
 
 ### Hi there 👋, my name is Dominik
 ![](https://user-images.githubusercontent.com/66419930/92467054-e7a00a80-f1c8-11ea-9233-c6572ce26995.png)
