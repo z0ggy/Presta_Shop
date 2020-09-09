@@ -15,6 +15,6 @@ Feature: Change user address
     And User check the address is deleted
     And close driver
     Examples:
-      | alias      | city        | postCode | country        | phone        | address         |
-      | Grunwald   | Ladek Zdroj | 00-000   | United Kingdom | 004878965033 | Kolejowa street |
-    #  | Zasadniczo | Praga       | 000-001  | United Kingdom | 0045876921   | Ogorkowa        |
+      | alias | city   | postCode | country        | phone        | address        |
+      | z0ggy | London | 00-000   | United Kingdom | 004878965033 | Gherkin street |
+    #  | Dominik | Manchester | 000-001  | United Kingdom | 0045876921   | Selenium street        |
