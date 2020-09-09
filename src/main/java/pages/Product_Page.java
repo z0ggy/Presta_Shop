@@ -62,7 +62,7 @@ public class Product_Page {
     }
     public void printValue(){
         //System.out.println(productsSizes.get(0).getText());
-        System.out.println("ilosc sztuk "+ quantity.getAttribute("value"));
+        System.out.println("The number of items selected  "+ quantity.getAttribute("value"));
     }
     public void addToCart() {
         cart.isDisplayed();

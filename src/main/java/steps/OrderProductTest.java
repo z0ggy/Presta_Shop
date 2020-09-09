@@ -4,6 +4,7 @@ import CoreTest.SetupBrowser;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.*;
@@ -55,7 +56,6 @@ public class OrderProductTest {
 
     @And("^User will choose (\\d+) pieces$")
     public void userWillChoosePieces(int total) throws InterruptedException {
-        product_page.printValue();
         product_page.chooseQuantity(total);
         product_page.printValue();
     }
@@ -91,8 +91,13 @@ public class OrderProductTest {
         order_page.choosePaymentOption();
     }
 
-    @And("^User will click order with an obligation to pay$")
+    @Then("^User will click order with an obligation to pay$")
     public void userWillClickOrderWithAnObligationToPay() {
         order_page.obligationToPay();
+    }
+
+    @And("^close browser$")
+    public void closeBrowser() {
+        SetupBrowser.getDriver().quit();
     }
 }
