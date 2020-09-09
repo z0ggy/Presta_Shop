@@ -15,4 +15,4 @@ Skills: VUE JS / REACT / JS / HTML / CSS
 
 ![Profile views](https://gpvc.arturio.dev/z0ggy)  
 **Recordit**
-![Recordit GIF](http://recordit.co/F7yFnanWCA)
+![Recordit GIF](http://recordit.co/F7yFnanWCA.gif)
