@@ -10,10 +10,8 @@ Skills: Java / JS / HTML / CSS
 - 🔭 I’m currently working on this page.https://prod-kurs.coderslab.pl/index.php 
 - 🌱 I’m currently learning Selenium Java 
 
-
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/z0ggy)  
- 
-
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/66419930/92660408-401ef700-f2f2-11ea-963f-e34d2da91248.gif)
+
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/z0ggy)
 
 ![Profile views](https://gpvc.arturio.dev/z0ggy) 
