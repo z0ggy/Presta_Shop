@@ -5,7 +5,7 @@
 
 I made this project for testing automation an online store with selenium java framework
 
-Skills: VUE JS / REACT / JS / HTML / CSS
+Skills: Java / JS / HTML / CSS
 
 - 🔭 I’m currently working on this page.https://prod-kurs.coderslab.pl/index.php 
 - 🌱 I’m currently learning Selenium Java 
