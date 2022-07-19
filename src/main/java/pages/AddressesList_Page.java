@@ -48,7 +48,7 @@ public class AddressesList_Page {
         }
     }
 
-    public void jebaneAdressy() {
+    public void testingAdress() {
         for (int i = deleteAddressesList.size(); i > 0; i--) {
             WebElement element = deleteAddressesList.get(i - 1);
             element.isDisplayed();
